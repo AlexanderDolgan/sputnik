@@ -1,0 +1,27 @@
+{
+  "name": "sputnik",
+  "description": "hostel",
+  "main": "",
+  "authors": [
+    "Alexander Dolgan"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "blog"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*",
+    "jquery-ui": "1.*"
+
+  }
+}

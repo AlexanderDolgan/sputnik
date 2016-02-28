@@ -1,0 +1,370 @@
+@font-face {
+  font-family: 'TalbotTypeKamerik105CyrillicLight';
+  src: url('fonts/TalbotTypeKamerik105CyrillicLight.eot');
+  src: url('fonts/TalbotTypeKamerik105CyrillicLight.eot') format('embedded-opentype'),
+  url('fonts/TalbotTypeKamerik105CyrillicLight.woff2') format('woff2'),
+  url('fonts/TalbotTypeKamerik105CyrillicLight.woff') format('woff'),
+  url('fonts/TalbotTypeKamerik105CyrillicLight.ttf') format('truetype'),
+  url('fonts/TalbotTypeKamerik105CyrillicLight.svg#TalbotTypeKamerik105CyrillicLight') format('svg');
+}
+
+@font-face {
+  font-family: 'TalbotTypeKamerik105CyrillicLightOblique';
+  src: url('fonts/TalbotTypeKamerik105CyrillicLightOblique.eot');
+  src: url('fonts/TalbotTypeKamerik105CyrillicLightOblique.eot') format('embedded-opentype'),
+  url('fonts/TalbotTypeKamerik105CyrillicLightOblique.woff2') format('woff2'),
+  url('fonts/TalbotTypeKamerik105CyrillicLightOblique.woff') format('woff'),
+  url('fonts/TalbotTypeKamerik105CyrillicLightOblique.ttf') format('truetype'),
+  url('fonts/TalbotTypeKamerik105CyrillicLightOblique.svg#TalbotTypeKamerik105CyrillicLightOblique') format('svg');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $main-font-family; // Kamerlik
+  line-height: $line-height-base; // 1.7
+  font-size: $font-size-base; // 14px
+
+  color: $text-color; // black
+
+  -webkit-font-smoothing:antialiased;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h1, h2, h3 {
+  font-weight: 300;
+
+}
+
+ul {
+
+  list-style: none;
+}
+
+p {
+  letter-spacing: 1px;
+}
+
+a,
+a:link,
+a:visited,
+a:active, {
+  color: $brand-primary;
+
+}
+
+a:hover,
+a:focus {
+  color: lighten($brand-primary, 50%);
+  outline: none;
+}
+
+//header logo and language switcher
+.site-nav {
+  padding: 5px;
+  background-color: white;
+
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+.logo-header img {
+  width: 145px;
+  margin-right: -75px;
+}
+
+.menu-lang-box {
+  float: right;
+}
+
+.menu-drop {
+  float: left;
+  padding: 5px 10px 0 20px;
+}
+
+.lang {
+  float: right;
+  padding: 10px 10px 0 20px;
+}
+
+.menu-lang-box span {
+  font-size: 1.5em;
+  line-height: 1.8;
+}
+
+.visa a{
+  font-size: 0.8em;
+  padding-right: 10px;
+  padding-bottom:5px;
+}
+
+//hamburger menu and dialog box
+
+.links {
+  margin-top: 10vh;
+  padding: 0;
+  list-style: none;
+}
+
+.modal {
+  margin-top: 4em;
+}
+
+.modal-body .links li a {
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  color: white;
+  font-size: 2.5em;
+}
+
+.links li a:hover {
+  background-color: rgba(255, 255, 255, .1);
+}
+
+//travelline search form
+
+.tl-search {
+  padding-top: 5px;
+  position: fixed;
+  width: 100%;
+  top: 50px;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 99;
+}
+
+.tl-search-form {
+  max-width: 965px;
+  margin: 0 auto;
+}
+
+//hero slider
+
+.hero {
+  position: relative;
+  text-align: center;
+
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: 1;
+}
+
+.hero-h1 {
+  margin-bottom: 0;
+
+  font-size: 7vw;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 1px 1px black;
+  line-height: 1;
+}
+
+.hero-p {
+  display: block;
+  max-width: 50vw;
+  padding: 10px;
+  margin: 0 auto;
+
+
+  font-size: 1.3em;
+  color: #FFF;
+  text-shadow: 1px 1px black;
+}
+
+.gallery {
+  margin-top: 50px;
+}
+
+.carousel-inner > .item > a > img,
+.carousel-inner > .item > img {
+  width: 100%;
+}
+
+.site-nav-links:hover .navigation,
+.site-nav-links:focus .navigation {
+  display: block;
+}
+
+// About section
+
+.about {
+  min-height: 400px;
+  padding: 100px 50px;
+
+  background: url("../img/section-bg.svg") no-repeat center;
+
+  background-size: cover;
+}
+
+.about-h1 {
+  margin-bottom: 0;
+
+  text-align: center;
+  font-size: 7vw;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+//room info
+
+#roominfo {
+  padding-top: 150px;
+  margin-top: -150px;
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
+}
+
+.roominfo-h1 {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 50px 0 20px 0;
+}
+
+article h2 {
+  text-align: center;
+}
+
+.lozenge {
+  width: 100%;
+  clip-path: polygon(50% 0%, 95% 50%, 50% 100%, 5% 50%);
+  margin-bottom: 1em;
+}
+
+.boxes {
+  position: relative;
+}
+
+//contacts
+.contacts {
+  margin-top: 3em;
+}
+
+#contacts {
+  padding-top: 100px;
+  margin-top: -100px;
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
+}
+
+.found-us {
+  height: 70px;
+  background: url("../img/section-bg2.svg") no-repeat center;
+  height: 300px;
+  background-size: cover;
+}
+
+.found-us h1 {
+  margin-bottom: 0;
+
+  font-size: 6vw;
+  text-align: center;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.found-us h2 {
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+//route block with yandex map and video
+.route h3 {
+  text-align: center;
+  line-height: 3;
+}
+
+#map {
+  width: 100%;
+  min-height: 400px;
+  margin: 0 auto;
+}
+
+.route h2 {
+  text-align: center;
+  line-height: 3;
+}
+
+.mail-phone {
+  text-align: center;
+  font-size: $font-size-large;
+  letter-spacing: 1.2px;
+}
+
+.mail-phone a {
+  padding: 0 10px;
+  text-decoration: underline;
+}
+
+//site footer
+
+.site-footer {
+  margin-top: 2em;
+}
+
+.other-staff {
+  text-align: center;
+}
+
+.first-loz,
+.second-loz,
+.third-loz {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+}
+
+.first-loz p,
+.second-loz p,
+.third-loz p {
+  display: block;
+  position: absolute;
+
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+.second-loz {
+  margin: 0 3vw;
+  width: 130px;
+}
+
+.copyright {
+  text-align: center;
+  font-size: $font-size-small;
+}
+
+/* VISA PAGE */
+
+.visa-body {
+  padding-top:250px;
+}
+
+//Reservation Page
+
+.reservation-h1 {
+  text-align: center;
+}

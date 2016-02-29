@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="0ca756b2-d44f-4877-857c-c192580da212" name="sputnik_spectr" url="http://z9496.spectrum.myjino.ru">
-        <fileTransfer host="z9496.spectrum.myjino.ru" port="21" rootFolder="/site" username="sputnikhostel_wp1">
+        <fileTransfer host="z9496.spectrum.myjino.ru" port="21" rootFolder="/site" password="dfebdfe7dfc8dfd9dfc4dfdbdf9fdfc8df9c" username="sputnikhostel_wp1">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

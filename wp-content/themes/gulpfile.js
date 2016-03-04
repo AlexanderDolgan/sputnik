@@ -17,7 +17,8 @@ var gulp = require('gulp'),
 
 var path = {
     build: { //to
-        html: 'sputnik/',
+        //html: 'sputnik/',
+        php: 'sputnik/',
         js: 'sputnik/js/',
         css: 'sputnik/',
         img: 'sputnik/img/',
@@ -26,6 +27,7 @@ var path = {
     },
     src: { //from
         //html: 'src/*.html',
+        php: 'src/*.php',
         js: 'src/js/main.js',
         style: 'src/style/style.scss',
         img: 'src/img/**/*.*',
@@ -34,6 +36,7 @@ var path = {
     },
     watch: {
         //html: 'src/**/*.html',
+        php: 'src/**/*.php',
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.scss',
         img: 'src/img/**/*.*',
@@ -44,14 +47,14 @@ var path = {
     clean: './build'
 };
 
-var config = {
-    server: {
-        "devUrl": "http://localhost:8888/sputnik/"
-    },
-    //tunnel: true,
-    //host: 'http://localhost/sputnik',
-    logPrefix: "sputnik"
-};
+//var config = {
+//    server: {
+//        "devUrl": "http://localhost:8888/sputnik/"
+//    },
+//    tunnel: true,
+//    host: 'http://localhost/sputnik',
+//    logPrefix: "sputnik"
+//};
 
 ////таск для сборки html
 //gulp.task('html:build', function () {
@@ -60,6 +63,12 @@ var config = {
 //        .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
 //        .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 //});
+
+gulp.task('php:build', function () {
+    gulp.src(path.src.php)
+        .pipe(gulp.dest(path.build.php))
+        .pipe(reload({stream: true}));
+});
 
 gulp.task('js:build', function () {
     gulp.src(path.src.js)
@@ -117,6 +126,7 @@ gulp.task('svg:build', function() {
 
 gulp.task('build', [
     //'html:build',
+    'php:build',
     'js:build',
     'style:build',
     'fonts:build',
@@ -129,6 +139,9 @@ gulp.task('watch', function(){
     //watch([path.watch.html], function(event, cb) {
     //    gulp.start('html:build');
     //});
+    watch([path.watch.php], function(event, cd){
+       gulp.start('php:build');
+    });
     watch([path.watch.style], function(event, cb) {
         gulp.start('style:build');
     });
@@ -149,15 +162,21 @@ gulp.task('watch', function(){
     });
 });
 
-gulp.task('webserver', function () {
-    browserSync(config);
+//gulp.task('webserver', function () {
+//    browserSync(config);
+//});
+
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        proxy: "http://localhost:8888/sputnik/"
+    });
 });
 
 gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 })
 
-gulp.task('default', ['build', 'webserver', 'watch']);
+gulp.task('default', ['build', 'browser-sync', 'watch']);
 
 
 

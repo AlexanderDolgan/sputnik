@@ -1,5 +1,21 @@
-// scrollspy - header
+//travelline search form in site header
 
+(function (w) {
+    var q = [
+        ['setContext', 'TL-INT-sputnikhostel', 'ru'],
+        ['embed', 'search-form', {container: 'tl-search-form'}]
+    ];
+    var t = w.travelline = (w.travelline || {}), ti = t.integration = (t.integration || {});
+    ti.__cq = ti.__cq ? ti.__cq.concat(q) : q;
+    if (!ti.__loader) {
+        ti.__loader = true;
+        var d = w.document, p = d.location.protocol, s = d.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = (p == 'https:' ? p : 'http:') + '//ibe.tlintegration.com/integration/loader.js';
+        (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+    }
+})(window);
 
 // Yandex Map
 ymaps.ready(init);
@@ -33,41 +49,3 @@ function init() {
     sputnikMap.behaviors.disable('scrollZoom');
     sputnikMap.behaviors.disable('drag');
 }
-
-
-////bootstrap affix
-//$('#sticky').affix({
-//    offset: {
-//        top: 0,
-//        bottom: 200
-//    }
-//});
-
-
-//travelline search form in site header
-
-(function (w) {
-    var q = [
-        ['setContext', 'TL-INT-sputnikhostel', 'ru'],
-        ['embed', 'search-form', {container: 'tl-search-form'}]
-    ];
-    var t = w.travelline = (w.travelline || {}), ti = t.integration = (t.integration || {});
-    ti.__cq = ti.__cq ? ti.__cq.concat(q) : q;
-    if (!ti.__loader) {
-        ti.__loader = true;
-        var d = w.document, p = d.location.protocol, s = d.createElement('script');
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = (p == 'https:' ? p : 'http:') + '//ibe.tlintegration.com/integration/loader.js';
-        (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
-    }
-})(window);
-
-//resolve modal problem
-$(document).on('show.bs.modal', '.modal', function () {
-    var zIndex = 1040 + (10 * $('.modal:visible').length);
-    $(this).css('z-index', zIndex);
-    setTimeout(function () {
-        $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
-    }, 0);
-});

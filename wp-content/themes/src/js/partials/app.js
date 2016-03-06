@@ -49,3 +49,28 @@ function init() {
     sputnikMap.behaviors.disable('scrollZoom');
     sputnikMap.behaviors.disable('drag');
 }
+
+//top navigation menu
+//toggle active and open classes, add esc btn toggle class function
+
+$('#toggle').click(function() {
+    $(this).toggleClass('active');
+    $('#overlay').toggleClass('open');
+});
+
+$('.menu-main-menu-container').click(function () {
+    $('#toggle').toggleClass('active');
+    $('#overlay').toggleClass('open');
+});
+
+$(document).keydown(function (e) {
+
+    if (e.keyCode == 27) {
+        $('#toggle').toggleClass('active');
+        $('#overlay').toggleClass('open');
+    }
+});
+
+$('#roominfo').click(function() {
+
+});

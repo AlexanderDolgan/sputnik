@@ -76,7 +76,7 @@ a:focus {
   text-align: center;
   position: fixed;
   width: 100%;
-  z-index: 9999;
+  z-index: 50;
 }
 
 .logo-header img {
@@ -88,10 +88,10 @@ a:focus {
   float: right;
 }
 
-.menu-drop {
-  float: left;
-  padding: 5px 10px 0 20px;
-}
+//.menu-drop {
+//  float: left;
+//  padding: 5px 10px 0 20px;
+//}
 
 .lang {
   float: right;
@@ -118,7 +118,7 @@ a:focus {
 }
 
 .modal {
-  margin-top: 4em;
+  margin-top: -50px;
 }
 
 .modal-body .links li a {
@@ -140,7 +140,7 @@ a:focus {
   width: 100%;
   top: 50px;
   background-color: rgba(0, 0, 0, .7);
-  z-index: 99;
+  z-index: 49;
 }
 
 .tl-search-form {
@@ -205,9 +205,9 @@ a:focus {
 
 .about {
   min-height: 400px;
-  padding: 100px 50px;
+  padding: 100px 50px 20px;
 
-  background: url("../img/section-bg.svg") no-repeat center;
+  background: url("img/section-bg.svg") no-repeat center;
 
   background-size: cover;
 }
@@ -264,8 +264,8 @@ article h2 {
 
 .found-us {
   height: 70px;
-  background: url("../img/section-bg2.svg") no-repeat center;
-  height: 300px;
+  background: url("img/section-bg2.svg") no-repeat center;
+  height: 175px;
   background-size: cover;
 }
 

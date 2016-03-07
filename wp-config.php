@@ -26,7 +26,7 @@ define('DB_NAME', '449115_wp1');
 define('DB_USER', '449115_wp1');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'cTQ4hn66z');
+define('DB_PASSWORD', '3Hr9yVqgH');
 
 /** MySQL hostname */
 define('DB_HOST', 'z9496.spectrum.myjino.ru');

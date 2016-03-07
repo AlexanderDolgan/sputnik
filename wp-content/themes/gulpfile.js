@@ -168,7 +168,7 @@ gulp.task('watch', function(){
 
 gulp.task('browser-sync', function() {
     browserSync.init({
-        proxy: "http://localhost:8888/sputnik/"
+        proxy: "http://localhost/sputnik/"
     });
 });
 
